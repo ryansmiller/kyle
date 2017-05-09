@@ -26,3 +26,15 @@ h1.site-title {
 	font-weight: 400 !important;
 }
 
+
+
+/* Admin-Bar fixes */
+
+.admin-bar #page {
+	top: 33px;
+	position: relative;
+}
+
+.admin-bar .navbar-fixed-top {
+	top: 33px;
+}
