@@ -38,3 +38,15 @@ h1.site-title {
 .admin-bar .navbar-fixed-top {
 	top: 33px;
 }
+
+@media screen and (max-width: 782px) {
+	
+	.admin-bar #page {
+		top: 47px;
+		position: relative;
+	}
+	.admin-bar .navbar-fixed-top {
+		top: 47px;
+	}
+
+}
