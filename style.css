@@ -58,7 +58,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 @media (min-width: 1200px) {
 	
 	.container {
-	    width: 1024px;
+	    width: 1024px !important;
 	}
 
 }
@@ -87,9 +87,7 @@ h1.site-title {
 
 /* Content */
 
-#primary {
-	padding-top: 60px;
-}
+
 
 
 /* Header: Navbar */
@@ -106,6 +104,32 @@ h1.site-title {
 .navbar-brand>img {
 	height: 20px;
 }
+
+
+/* Home: Welcome Message; */
+
+.home-welcome-widget {
+	height: 100vh;
+	position: relative;
+}
+
+.home-welcome-widget h2 {
+	text-align: center;
+	padding-top: 15%;
+}
+
+.home-welcome-widget p {
+	text-align: center;
+} 
+
+.home-welcome-widget .fa-chevron-down {
+	bottom: 20%;
+	left: 50%;
+	margin-left: -15px;
+	font-size: 30px;
+	position: absolute;
+}
+
 
 
 /* Weekend Briefing */
