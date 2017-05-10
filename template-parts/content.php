@@ -13,9 +13,9 @@
 	<header class="entry-header">
 
 		<?php if( is_single() ) { ?>
-			<?php the_post_thumbnail( 'full' ); ?>
+			<?php the_post_thumbnail( 'full', array( 'class' => 'img-responsive' )); ?>
 		<?php } else { ?>
-			<a href="<?php get_permalink(); ?>" rel="bookmark"><?php the_post_thumbnail(); ?></a>	
+			<a href="<?php get_permalink(); ?>" rel="bookmark"><?php the_post_thumbnail('full', array( 'class' => 'img-responsive' )); ?></a>	
 		<?php } ?>
 
 		<?php
@@ -27,7 +27,7 @@
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<em>by</em> <span class="entry-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><a href="<?php the_author_url(); ?>" class="entry-author-link" itemprop="url" rel="author"><span class="entry-author-name" itemprop="name"><?php the_author(); ?></span></a> · <?php the_date(); ?></span>
+			<?php echo get_avatar( get_the_author_meta( 'ID' ), '120', $default, $alt, array( 'class' => 'img-responsive img-circle' ) ); ?> <em>by</em> <span class="entry-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><a href="<?php the_author_url(); ?>" class="entry-author-link" itemprop="url" rel="author"><span class="entry-author-name" itemprop="name"><?php the_author(); ?></span></a> · <?php the_date(); ?></span>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>

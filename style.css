@@ -26,27 +26,37 @@ h1.site-title {
 	font-weight: 400 !important;
 }
 
+.avatar {
+	display: inline-block !important;
+}
 
 
 /* Admin-Bar fixes */
 
 .admin-bar #page {
-	top: 33px;
+	top: 32px;
 	position: relative;
 }
 
 .admin-bar .navbar-fixed-top {
-	top: 33px;
+	top: 32px;
 }
 
 @media screen and (max-width: 782px) {
 	
 	.admin-bar #page {
-		top: 47px;
+		top: 46px;
 		position: relative;
 	}
 	.admin-bar .navbar-fixed-top {
-		top: 47px;
+		top: 46px;
 	}
 
+}
+
+
+/* Header: Navbar */
+
+.navbar {
+	background-color: #ffffff;
 }
