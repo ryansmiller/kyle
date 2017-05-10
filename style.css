@@ -19,17 +19,6 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 */
 
 
-/* Bootstrap Fixes */
-
-h1.site-title {
-	margin: 0 !important;
-	font-weight: 400 !important;
-}
-
-.avatar {
-	display: inline-block !important;
-}
-
 
 /* Admin-Bar fixes */
 
@@ -55,8 +44,31 @@ h1.site-title {
 }
 
 
+/* Bootstrap Fixes */
+
+h1.site-title {
+	margin: 0 !important;
+	font-weight: 400 !important;
+}
+
+.avatar {
+	display: inline-block !important;
+}
+
+
+/* Content */
+
+#primary {
+	padding-top: 60px;
+}
+
+
 /* Header: Navbar */
 
 .navbar {
 	background-color: #ffffff;
+}
+
+.navbar-toggle .icon-bar {
+	background-color: #000000;
 }
