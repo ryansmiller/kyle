@@ -114,8 +114,10 @@ function kyle_westaway_minimal_scripts() {
 	wp_enqueue_style( 'kyle-westaway-minimal-style', get_stylesheet_uri() );
 
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.7', false );
-	
+
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '3.3.7', true );
+
+	wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/custom.js', array('bootstrap'), null, true );
 
 }
 add_action( 'wp_enqueue_scripts', 'kyle_westaway_minimal_scripts' );
