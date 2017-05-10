@@ -21,9 +21,11 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 /* Display: none; */
 
-.site-title-text {
+/* .site-title-text */
+.site-title img {
 	display: none;
 }
+ 
 
 
 
@@ -77,8 +79,9 @@ a {
 	color: #000000 !important;
 }
 
-.navbar a {
+.site-header .navbar-nav a {
 	font-weight: 700;
+	text-transform: uppercase;
 }
 
 
@@ -102,4 +105,12 @@ a {
 
 .navbar-brand>img {
 	height: 20px;
+}
+
+
+/* Weekend Briefing */
+
+.site-header .navbar a.navbar-brand {
+	font-family: "Cochin-regular" !important;
+	font-family: 400 !important;
 }
