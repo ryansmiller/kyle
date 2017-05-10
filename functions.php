@@ -114,9 +114,7 @@ function kyle_westaway_minimal_scripts() {
 	wp_enqueue_style( 'kyle-westaway-minimal-style', get_stylesheet_uri() );
 
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.7', false );
-
-	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery-3.2.1.min.js', array(), null, true);
-
+	
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '3.3.7', true );
 
 }
