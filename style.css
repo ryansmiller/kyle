@@ -19,6 +19,13 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 */
 
 
+/* Display: none; */
+
+.site-title-text {
+	display: none;
+}
+
+
 
 /* Admin-Bar fixes */
 
@@ -64,6 +71,17 @@ h1.site-title {
 }
 
 
+/* Typography */
+
+a {
+	color: #000000 !important;
+}
+
+.navbar a {
+	font-weight: 700;
+}
+
+
 /* Content */
 
 #primary {
@@ -75,8 +93,13 @@ h1.site-title {
 
 .navbar {
 	background-color: #ffffff;
+	border-bottom: 1px solid #eee !important;
 }
 
 .navbar-toggle .icon-bar {
 	background-color: #000000;
+}
+
+.navbar-brand>img {
+	height: 20px;
 }

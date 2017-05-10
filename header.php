@@ -36,9 +36,19 @@
 			      </button>
 			      	<?php
 					if ( is_front_page() && is_home() ) : ?>
-						<h1 class="site-title"><a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+						<h1 class="site-title">
+							<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><span class="site-title-text"><?php bloginfo( 'name' ); ?></span> 
+								<img src="<?php $custom_logo_id = get_theme_mod( 'custom_logo' ); $image = wp_get_attachment_image_src( $custom_logo_id , 'full' ); echo $image[0]; ?>" class="img-responsive" height="20" />
+							</a>
+						</h1>
+
+						
 					<?php else : ?>
-						<p class="site-title"><a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+						<p class="site-title">
+							<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><span class="site-title-text"><?php bloginfo( 'name' ); ?></span> 
+								<img src="<?php $custom_logo_id = get_theme_mod( 'custom_logo' ); $image = wp_get_attachment_image_src( $custom_logo_id , 'full' ); echo $image[0]; ?>" class="img-responsive" height="20" />
+							</a>
+						</p>
 					<?php
 					endif;
 					?>

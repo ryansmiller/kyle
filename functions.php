@@ -38,7 +38,11 @@ function kyle_westaway_minimal_setup() {
 	/*
 	 * Add Custom Logo
 	 */
-	add_theme_support( 'custom-logo' );
+	add_theme_support( 'custom-logo', array(
+		'height'      => 20,
+		'width'       => 200,
+		'header-text' => array( 'site-title' ),
+	) );
 
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
@@ -87,6 +91,24 @@ function kyle_westaway_minimal_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'kyle_westaway_minimal_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'kyle_westaway_minimal_content_width', 0 );
+
+
+
+function kyle_westaway_minimal_the_custom_logo() {
+	if ( function_exists( 'the_custom_logo' ) ) {
+		the_custom_logo();
+	}
+}
+
+ 
+function change_logo_class($html)
+{
+	$html = str_replace('custom-logo-link', 'navbar-brand', $html);
+	$html = str_replace('custom-logo', 'custom-logo img-responsive', $html);
+	return $html;
+}
+
+add_filter('get_custom_logo','change_logo_class');
 
 /**
  * Register widget area.
