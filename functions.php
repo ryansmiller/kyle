@@ -125,6 +125,17 @@ function kyle_westaway_minimal_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) ); */
+
+
+	register_sidebar( array(
+		'name'          => 'Welcome Message',
+		'id'            => 'home-welcome-message',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="welcome-message-title">',
+		'after_title'   => '</h2>',
+	) );
+
 }
 add_action( 'widgets_init', 'kyle_westaway_minimal_widgets_init' );
 

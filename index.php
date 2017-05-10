@@ -17,6 +17,16 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+		<?php if ( is_home() || is_front_page() ) : ?>
+
+			<?php if ( is_active_sidebar( 'home-welcome-message' ) ) : ?>
+				
+				<?php dynamic_sidebar( 'home-welcome-message' ); ?>
+				
+			<?php endif; ?>
+
+		<?php endif; ?>
+
 		<?php
 		if ( have_posts() ) :
 

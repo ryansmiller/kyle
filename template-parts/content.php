@@ -9,6 +9,7 @@
 
 ?>
 
+<div class="container">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 
@@ -34,6 +35,7 @@
 	</header><!-- .entry-header -->
 
 
+	<?php if ( is_single() ) { ?>
 	<div class="entry-content">
 		<?php
 			the_content( sprintf(
@@ -48,8 +50,10 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
+	<?php } ?>
 
 	<footer class="entry-footer">
 		<?php kyle_westaway_minimal_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
+</div>
