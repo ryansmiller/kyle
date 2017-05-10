@@ -36,6 +36,11 @@ function kyle_westaway_minimal_setup() {
 	add_theme_support( 'title-tag' );
 
 	/*
+	 * Add Custom Logo
+	 */
+	add_theme_support( 'custom-logo' );
+
+	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/

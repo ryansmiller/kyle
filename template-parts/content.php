@@ -12,7 +12,11 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 
-		<?php the_post_thumbnail( 'full' ); ?>
+		<?php if( is_single() ) { ?>
+			<?php the_post_thumbnail( 'full' ); ?>
+		<?php } else { ?>
+			<a href="<?php get_permalink(); ?>" rel="bookmark"><?php the_post_thumbnail(); ?></a>	
+		<?php } ?>
 
 		<?php
 		if ( is_single() ) :
@@ -23,11 +27,12 @@
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php kyle_westaway_minimal_posted_on(); ?>
+			<em>by</em> <span class="entry-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><a href="<?php the_author_url(); ?>" class="entry-author-link" itemprop="url" rel="author"><span class="entry-author-name" itemprop="name"><?php the_author(); ?></span></a> · <?php the_date(); ?></span>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->
+
 
 	<div class="entry-content">
 		<?php
