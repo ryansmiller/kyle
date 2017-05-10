@@ -11,13 +11,14 @@
 
 <div class="container">
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<header class="entry-header">
 
 			<?php if( is_single() ) { ?>
 				<?php the_post_thumbnail( 'full', array( 'class' => 'img-responsive' )); ?>
 			<?php } else { ?>
 				<a href="<?php echo get_permalink( $post->ID ); ?>" rel="bookmark"><?php the_post_thumbnail('full', array( 'class' => 'img-responsive' )); ?></a>	
 			<?php } ?>
+
+		<header class="entry-header">
 
 			<?php
 			if ( is_single() ) :

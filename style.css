@@ -55,6 +55,10 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 /* Bootstrap Fixes */
 
+body {
+ 	-webkit-font-smoothing: antialiased;
+}
+
 @media (min-width: 1200px) {
 	
 	.container {
@@ -87,12 +91,34 @@ h1.site-title {
 
 /* Content */
 
+.avatar {
+	height: 46px;
+	width: 46px;
+	margin-right: 10px;
+}
 
+.single .entry-meta {
+	text-align: center;
+	
+}
+
+.single .entry-content {
+	padding-top: 45px;
+	
+}
+
+.single .entry-header {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	border-bottom: 1px solid #eee;
+}
 
 
 /* Header: Navbar */
 
 .navbar {
+	padding-top: 10px;
+	padding-bottom: 10px;
 	background-color: #ffffff;
 	border-bottom: 1px solid #eee !important;
 }
@@ -102,7 +128,7 @@ h1.site-title {
 }
 
 .navbar-brand>img {
-	height: 20px;
+	height: 30px;
 }
 
 
@@ -132,9 +158,48 @@ h1.site-title {
 
 
 
+/* Posts */
+
+.entry-content {
+	max-width: 720px;
+	margin: 0 auto;
+}
+
+
 /* Weekend Briefing */
 
 .site-header .navbar a.navbar-brand {
 	font-family: "Cochin-regular" !important;
 	font-family: 400 !important;
+}
+
+p {
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif !important;
+    color: #000;
+    margin: 0 0 30px !important;
+    padding: 0;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    line-height: 1.9em;
+}
+
+.single .entry-title {
+	font-family: 'Cochin-Regular', Georgia, Cambria, "Times New Roman", Times, serif !important;
+    text-align: center;
+}
+
+.single .entry-title {
+	font-size: 3.6rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.single h2 {
+	font-family: Helvetica, Arial, sans-serif !important;
+    padding: 30px 0 10px 0 !important;
+    border-bottom: 1px solid #ccc !important;
+    font-weight: bold !important;
+    margin: 0 0 10px !important;
+    font-size: 22px !important;
 }
