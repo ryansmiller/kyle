@@ -46,6 +46,14 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 /* Bootstrap Fixes */
 
+@media (min-width: 1200px) {
+	
+	.container {
+	    width: 1024px;
+	}
+
+}
+
 h1.site-title {
 	margin: 0 !important;
 	font-weight: 400 !important;
