@@ -19,6 +19,25 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 */
 
 
+/* Resets */
+
+
+*, *:before, *:after {
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	font-feature-settings: "kern";
+	font-kerning: normal;
+}
+
+.touchevents *,.touchevents *:before,.touchevents *:after { /* modernizr.js required */
+	text-rendering: optimizeSpeed; /* higher performance on mobile devices */
+}
+
+
+
+
 /* Display: none; */
 
 /* .site-title-text */
@@ -67,9 +86,12 @@ body {
 
 }
 
-h1.site-title {
+.site-title,
+.navbar-brand {
 	margin: 0 !important;
 	font-weight: 400 !important;
+	font-size: 24px !important;
+	letter-spacing: 0.5px;
 }
 
 .avatar {
@@ -89,7 +111,81 @@ h1.site-title {
 }
 
 
+
+/* Email Form */
+
+.mc_email_form {
+	/*background-color: #fff; */
+	padding: 0px !important;
+	position: relative;
+	width: 100%;
+}
+
+.mc_email_form label {
+	display: none;
+}
+
+@media only screen and (min-device-width: 768px) {
+	
+	.mc_email_form {
+    	display: flex;
+	}
+
+	.mc_email_form .sendgrid_mc_fields {
+	    flex: 1;
+	}
+	
+	.mc_email_form .sendgrid_mc_button_div {
+    	flex: 0;
+    	margin: 0 0 0 1rem;
+	}
+
+	.mc_email_form .sendgrid_mc_fields input[type="text"] {
+    	width: 100%;
+    }
+}
+
+.sendgrid_mc_fields {
+	width: auto;
+}
+
+.sendgrid_mc_button_div {
+	width: 200px;
+}
+
+.mc_email_form input[type="text"],
+.mc_email_form input[type="submit"] {
+	margin: 0px;
+	padding: 15px;
+	border: none;
+	color: #000 !important;
+	background-color: #fff;
+	line-height: 30px;
+}
+
+
+.mc_email_form input[type="submit"] {
+	font-weight: 400;
+	font-size: 14px;
+}
+
+
+
+
+.mc_email_form input[type="submit"]:hover {
+	background-color: #333;
+	color: #fff !important;
+	cursor: pointer !important;
+}
+
+
+
 /* Content */
+
+.site-content {
+	padding-top: 100px;
+	padding-bottom: 60px;
+}
 
 .avatar {
 	height: 46px;
@@ -141,21 +237,42 @@ h1.site-title {
 
 .home-welcome-widget h2 {
 	text-align: center;
-	padding-top: 15%;
+	padding-top: 15vh;
+	font-size: 84px;
+	padding-bottom: 20px;
+	letter-spacing: 0.5px;
 }
 
 .home-welcome-widget p {
 	text-align: center;
+	font-size: 20px;
 } 
 
 .home-welcome-widget .fa-chevron-down {
-	bottom: 20%;
+	bottom: 25%;
 	left: 50%;
 	margin-left: -15px;
 	font-size: 30px;
 	position: absolute;
 }
 
+.home-welcome-widget .mc_email_form {
+	width: 66%;
+	margin: 45px auto 0 auto;
+}
+
+.home-welcome-widget .mc_email_form input {
+	border: 1px solid #000;
+}
+
+
+
+/* Home: Down Arrow */
+
+.down-arrow {
+	text-align: center;
+	width: 100%;
+}
 
 
 /* Posts */
@@ -165,10 +282,54 @@ h1.site-title {
 	margin: 0 auto;
 }
 
+.entry-content a {
+	font-weight: 700;
+	
+}
+
+.entry-content a:hover {
+	text-decoration: underline;
+}
+
+/* Footer */
+
+.site-footer {
+	background-color: #000000;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+
+@media only screen and (min-device-width: 768px) {
+	
+	.site-footer {
+		padding-left: 45px;
+		padding-right: 45px;
+	}
+
+}
+
+.site-footer p {
+	color: #ffffff;
+	padding: 0;
+	margin: 0;
+	font-size: 18px;
+	height: 50px;
+	line-height: 50px;
+	font-weight: 700;
+}
+
+.siter-footer .row {
+	display: flex;
+}
+
+
+
 
 /* Weekend Briefing */
 
-.site-header .navbar a.navbar-brand {
+.site-header .navbar a.navbar-brand,
+.home-welcome-widget h2 {
 	font-family: "Cochin-regular" !important;
 	font-family: 400 !important;
 }
@@ -176,7 +337,7 @@ h1.site-title {
 p {
     font-family: Georgia, Cambria, "Times New Roman", Times, serif !important;
     color: #000;
-    margin: 0 0 30px !important;
+    margin: 0 0 30px;
     padding: 0;
     font-weight: 400;
     font-style: normal;

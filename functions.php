@@ -130,10 +130,37 @@ function kyle_westaway_minimal_widgets_init() {
 	register_sidebar( array(
 		'name'          => 'Welcome Message',
 		'id'            => 'home-welcome-message',
-		'before_widget' => '<div>',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="welcome-message-title">',
 		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Footer - Left',
+		'id'            => 'footer-left',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Footer - Right',
+		'id'            => 'footer-right',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'After Content',
+		'id'            => 'after-content',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '',
+		'after_title'   => '',
 	) );
 
 }

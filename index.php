@@ -20,10 +20,23 @@ get_header(); ?>
 
 			<?php if ( is_active_sidebar( 'home-welcome-message' ) ) : ?>
 				
-				<div class="home-welcome-widget">
-					
-					<?php dynamic_sidebar( 'home-welcome-message' ); ?>
-				
+				<div class="container">
+
+					<div class="row">
+
+						<div class="col-xs-12 col-md-10 col-md-offset-1">
+
+							<div class="home-welcome-widget">
+								
+								<?php dynamic_sidebar( 'home-welcome-message' ); ?>
+							
+							</div>
+
+
+						</div>
+
+					</div>
+
 				</div>
 				
 			<?php endif; ?>
@@ -66,8 +79,39 @@ get_header(); ?>
 		endif; ?>
 
 		</main><!-- #main -->
+
+		<div class="test">TEST</div>
+
+		<?php // if ( is_single() ) : ?>
+
+			<?php // if ( is_active_sidebar( 'after-content' ) ) : ?>
+				
+				<div class="container">
+
+					<div class="row">
+
+						<div class="col-xs-12 col-md-10 col-md-offset-1">
+
+							<div class="widget-after-content">
+								
+								<?php dynamic_sidebar( 'after-content' ); ?>
+							
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+				
+			<?php // endif; ?>
+
+		<?php // endif; ?>
+
+
+
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+/* get_sidebar(); */
 get_footer();
