@@ -9,8 +9,14 @@
 
 get_header(); ?>
 
+
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
 
 			<section class="error-404 not-found">
 				<header class="page-header">
@@ -56,6 +62,10 @@ get_header(); ?>
 
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
+
+		</div>
+	</div>
+	</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

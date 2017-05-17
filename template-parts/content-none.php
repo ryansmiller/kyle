@@ -9,6 +9,11 @@
 
 ?>
 
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+
 <section class="no-results not-found">
 	<header class="page-header">
 		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'kyle-westaway-minimal' ); ?></h1>
@@ -35,3 +40,7 @@
 		endif; ?>
 	</div><!-- .page-content -->
 </section><!-- .no-results -->
+
+</div>
+	</div>
+</div>

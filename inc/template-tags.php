@@ -39,14 +39,7 @@ function kyle_westaway_minimal_posted_on() {
 }
 endif;
 
-if ( ! function_exists( 'kyle_westaway_minimal_entry_footer' ) ) :
-/**
- * Prints HTML with meta information for the categories, tags and comments.
- */
-function kyle_westaway_minimal_entry_footer() {
 
-}
-endif;
 
 /**
  * Returns true if a blog has more than 1 category.

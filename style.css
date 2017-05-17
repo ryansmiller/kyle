@@ -110,6 +110,10 @@ body {
 	text-transform: uppercase;
 }
 
+.entry-title {
+
+}
+
 
 
 /* Email Form */
@@ -123,6 +127,42 @@ body {
 
 .mc_email_form label {
 	display: none;
+}
+
+
+.sendgrid_mc_fields {
+	width: auto;
+}
+
+.sendgrid_mc_button_div {
+	width: 100%;
+}
+
+
+.mc_email_form input[type="text"],
+.mc_email_form input[type="submit"] {
+	margin: 0px;
+	padding: 15px;
+	border: none;
+	color: #000 !important;
+	background-color: #fff;
+	line-height: 30px;
+	width: 100%;
+	margin-bottom: 10px;
+	border: 1px solid #000;
+	border-radius: none;
+}
+
+
+.mc_email_form input[type="submit"] {
+	font-weight: 400;
+	font-size: 14px;
+}
+
+.mc_email_form input[type="submit"]:hover {
+	background-color: #333;
+	color: #fff !important;
+	cursor: pointer !important;
 }
 
 @media only screen and (min-device-width: 768px) {
@@ -143,47 +183,25 @@ body {
 	.mc_email_form .sendgrid_mc_fields input[type="text"] {
     	width: 100%;
     }
+
+    .sendgrid_mc_button_div {
+		width: 200px;
+	}
+
+    .mc_email_form input[type="text"],
+	.mc_email_form input[type="submit"] {
+		margin-bottom: 0;
+	}
+
 }
 
-.sendgrid_mc_fields {
-	width: auto;
-}
-
-.sendgrid_mc_button_div {
-	width: 200px;
-}
-
-.mc_email_form input[type="text"],
-.mc_email_form input[type="submit"] {
-	margin: 0px;
-	padding: 15px;
-	border: none;
-	color: #000 !important;
-	background-color: #fff;
-	line-height: 30px;
-}
-
-
-.mc_email_form input[type="submit"] {
-	font-weight: 400;
-	font-size: 14px;
-}
-
-
-
-
-.mc_email_form input[type="submit"]:hover {
-	background-color: #333;
-	color: #fff !important;
-	cursor: pointer !important;
-}
 
 
 
 /* Content */
 
 .site-content {
-	padding-top: 100px;
+	
 	padding-bottom: 60px;
 }
 
@@ -191,6 +209,10 @@ body {
 	height: 46px;
 	width: 46px;
 	margin-right: 10px;
+}
+
+.single .site-content {
+	padding-top: 60px;
 }
 
 .single .entry-meta {
@@ -204,8 +226,8 @@ body {
 }
 
 .single .entry-header {
-	padding-top: 60px;
-	padding-bottom: 60px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 	border-bottom: 1px solid #eee;
 }
 
@@ -231,12 +253,45 @@ body {
 /* Home: Welcome Message; */
 
 .home-welcome-widget {
-	height: 100vh;
 	position: relative;
+	margin: 100px auto 50px auto;
+	height: 60vh;
 }
 
 .home-welcome-widget h2 {
 	text-align: center;
+	padding-top: 0px;
+	font-size: 36px;
+	padding-bottom: 10px;
+}
+
+.home-welcome-widget p {
+	text-align: center;
+	font-size: 15px;
+	margin-bottom: 10px !important;
+} 
+
+.home-welcome-widget .fa-chevron-down {
+	display:none;
+}
+
+.home-welcome-widget .mc_email_form {
+	width: 100%;
+	margin: 45px auto 0 auto;
+}
+
+.home-welcome-widget .mc_email_form input {
+	display: block;
+}
+
+
+@media (min-width:768px) {
+
+.home-welcome-widget {
+	height: 100vh;
+}
+
+.home-welcome-widget h2 {
 	padding-top: 15vh;
 	font-size: 84px;
 	padding-bottom: 20px;
@@ -249,6 +304,7 @@ body {
 } 
 
 .home-welcome-widget .fa-chevron-down {
+	display: block;
 	bottom: 25%;
 	left: 50%;
 	margin-left: -15px;
@@ -265,6 +321,7 @@ body {
 	border: 1px solid #000;
 }
 
+}
 
 
 /* Home: Down Arrow */
@@ -276,6 +333,10 @@ body {
 
 
 /* Posts */
+
+.post {
+	padding-bottom: 45px;
+}
 
 .entry-content {
 	max-width: 720px;
@@ -291,12 +352,16 @@ body {
 	text-decoration: underline;
 }
 
+.entry-content li {
+	padding-bottom: 20px;
+}
+
 /* Footer */
 
 .site-footer {
 	background-color: #000000;
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
 
@@ -334,27 +399,47 @@ body {
 	font-family: 400 !important;
 }
 
-p {
+.site-content p, .site-content li {
     font-family: Georgia, Cambria, "Times New Roman", Times, serif !important;
     color: #000;
-    margin: 0 0 30px;
-    padding: 0;
     font-weight: 400;
     font-style: normal;
     font-size: 17px;
     line-height: 1.9em;
 }
 
-.single .entry-title {
-	font-family: 'Cochin-Regular', Georgia, Cambria, "Times New Roman", Times, serif !important;
-    text-align: center;
+
+.site-content p {
+	margin: 0 0 30px;
+	padding: 0;
+}
+
+
+.entry-title {
+	font-family: "Cochin-regular", Georgia, Cambria, "Times New Roman", Times, serif !important;    
+}
+
+.blog .entry-title {
+	font-size: 2.4rem;
+	padding-bottom: 10px;
 }
 
 .single .entry-title {
 	font-size: 3.6rem;
     font-weight: 700;
     margin-bottom: 10px;
+    text-align: center;
 }
+
+.entry-meta {
+	font-family: Georgia, Cambria, "Times New Roman", Times, serif !important;  
+	font-size: 12px;  
+}
+
+.entry-author {
+	text-transform: uppercase;
+}
+
 
 .single h2 {
 	font-family: Helvetica, Arial, sans-serif !important;

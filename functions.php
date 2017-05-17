@@ -157,7 +157,7 @@ function kyle_westaway_minimal_widgets_init() {
 	register_sidebar( array(
 		'name'          => 'After Content',
 		'id'            => 'after-content',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'before_widget' => '<div class="widget-after-content">',
 		'after_widget'  => '</div>',
 		'before_title'  => '',
 		'after_title'   => '',
